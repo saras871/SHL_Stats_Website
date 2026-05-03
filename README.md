@@ -2,7 +2,7 @@
 
 A full-stack hockey analytics project that evaluates SHL players and teams by transforming performance data into ranked insights using SQL-based models
 
-## 💡 Features
+## 💡 Current features
 
 - **Goalie Analytics**
   - Interactive table with sorting
