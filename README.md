@@ -1,10 +1,10 @@
-#🏒 SHL Analytics Website
+# 🏒 SHL Analytics Website
 
 A full-stack hockey analytics project that evaluates SHL players and teams by transforming performance data into ranked insights using SQL-based models
 
-##💡 Features
+## 💡 Features
 
-- **Explore Goalies**
+- **Goalie Analytics**
   - Interactive table with sorting
   - Key stats: SVS%, Saves, GA, GAA, Games Played, Shutouts
   - Custom ranking model combining SVS% (higher is better) and GAA (lower is better)
@@ -20,7 +20,7 @@ A full-stack hockey analytics project that evaluates SHL players and teams by tr
     - Regular season
     - Overall (including playoffs & relegation)
    
-##📈 Future Improvements
+## 📈 Future Improvements
 - Add skater analytics and rankings
 - Improve UI/UX design
 - Add filtering and search functionality
