@@ -89,12 +89,14 @@ function renderClutch(data) {
         const row = document.createElement("div");
         row.className = "row data-row";
 
+        const clutchScoreClass = g.clutchScore > 0 ? "good" : "bad";
+
         row.innerHTML = `
             <div>${g.name}</div>
             <div>${g.team}</div>
             <div class="stat">${g.saveDiff.toFixed(3)}</div>
             <div class="stat">${g.gaaDiff.toFixed(2)}</div>
-            <div class="stat">${g.clutchScore.toFixed(3)}</div>
+            <div class="stat ${clutchScoreClass}">${g.clutchScore.toFixed(3)}</div>
         `;
 
         table.appendChild(row);

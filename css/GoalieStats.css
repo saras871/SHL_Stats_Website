@@ -57,7 +57,7 @@ main {
 }
 
 /* ---------------------------------------------------------------------------
-                                 RANKINGS 
+                               TABLES 
 ------------------------------------------------------------------------------ */
 .table {
     margin: auto;
@@ -112,7 +112,7 @@ main {
     grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
 }
 
-.rankingSection {
+.insightSection {
     margin-top: var(--space-3xl);
 }
 
@@ -140,6 +140,10 @@ main {
 .bad {
     color: var(--bad);
     text-shadow: 0 0 6px rgba(248, 113, 113, 0.5);
+}
+
+#exploreHeader:hover {
+    cursor: pointer;
 }
 
 /* .top {
