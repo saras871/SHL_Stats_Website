@@ -1,0 +1,6 @@
+@ShlStatsApi_HostAddress = http://localhost:5057
+
+GET {{ShlStatsApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

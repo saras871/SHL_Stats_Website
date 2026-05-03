@@ -1,0 +1,38 @@
+:root {
+    /* COLORS */
+   --bg: radial-gradient(circle at top, #0a0f1c, #05080f);
+    --surface: #111827;
+    --header-and-footer: #0f172a;
+    --table-header: #0b1220;
+
+    --text: #e5e7eb;
+    --text-muted: #9ca3af;
+
+    --accent: #22d3ee; /* 🔥 cyan */
+
+    --good: #4ade80;
+    --bad: #f87171;
+
+    --border: rgba(255,255,255,0.05);
+
+    /* SPACING */
+    --space-xs: 8px;
+    --space-sm: 12px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-2xl: 40px;
+    --space-3xl: 64px;
+
+    /* FONT SIZES */
+    --text-xxs: 0.625rem;
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-md: 1rem;
+    --text-lg: 1.25rem;
+    --text-xl: 1.75rem;
+    --text-2xl: 2.25rem;
+    --text-3xl: 2.625rem;
+    --text-4xl: 3rem;
+
+}

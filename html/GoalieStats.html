@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SHL Ranking</title>
+    <link rel="stylesheet" href="../css/Styles.css">
+    <link rel="stylesheet" href="../css/GoalieStats.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="brand">
+                <h1>SHL Stats</h1>
+            </div>
+            <ul class="navigation-items">
+                <li><a href=#>Home</a></li>
+                <li><a href="GoalieStats.html">Goalies</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <h2>🔍 Explore Goalies</h2>
+
+        <div class="table explore" id="exploreTable">
+
+            <div class=" row header" id="exploreHeader">
+                <div data-field="name">Name</div>
+                <div data-field="team">Team</div>
+                <div class="stat" data-field="gamesPlayed">GPI</div>
+                <div class="stat" data-field="saves">SVS</div>
+                <div class="stat" data-field="savePercentage">SVS%</div>
+                <div class="stat" data-field="goalsAgainst">GA</div>
+                <div class="stat" data-field="goalsAgainstAverage">GAA</div>
+                <div class="stat" data-field="shutouts">SO</div>
+
+
+            </div>
+
+        </div>
+
+        <h2 class="rankingSection">🏆 Rankings</h2>
+
+        <div>
+            <h3>Clutch Performance</h3>
+            <div id="clutchTable" class="table large">
+                <div class="row header">
+
+                    <div data-field="name">Name</div>
+                    <div data-field="team">Team</div>
+                    <div class="stat" data-field="saveDiff">SVS Diff</div>
+                    <div class="stat" data-field="gaaDiff">GAA Diff</div>
+                    <div class="stat" data-field="clutchScore">Clutch Score</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div>
+                <h3>Team Regular Season</h3>
+                <div id="regularTeamRank" class="table small">
+                    <div class="row header">
+
+                        <div data-field="team">Team</div>
+                        <div class="stat" data-field="savePercentage">SVS%</div>
+                        <div class="stat" data-field="goalsAgainstAverage">GAA</div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3>Team Overall</h3>
+                <div id="overallTeamRank" class="table small">
+                    <div class="row header">
+
+                        <div data-field="team">Team</div>
+                        <div class="stat" data-field="savePercentage">SVS%</div>
+                        <div class="stat" data-field="goalsAgainstAverage">GAA</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</body>
+<script src="../js/GoalieStats.js"></script>
+
+</html>

@@ -1,0 +1,147 @@
+/* ---------------------------------------------------------------------------
+                                    HEADER 
+------------------------------------------------------------------------------ */
+header {
+    background: var(--header-and-footer);
+    border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+    font-size: var(--text-2xl);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-lg);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.navigation-items {
+    display: flex;
+    list-style: none;
+    font-size: var(--text-lg);
+
+    gap: var(--space-lg);
+    padding: 0 var(--space-lg);
+}
+
+/* ---------------------------------------------------------------------------
+                                    
+------------------------------------------------------------------------------ */
+a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial;
+    margin: 0;
+}
+
+main {
+    padding: var(--space-2xl);
+
+}
+
+/* ---------------------------------------------------------------------------
+                                 RANKINGS 
+------------------------------------------------------------------------------ */
+.table {
+    margin: auto;
+    background: var(--surface);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    border-top: var(--accent);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+    margin: var(--space-2xl) 0;
+}
+
+.header {
+    background: var(--table-header);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: var(--text-sm);
+    letter-spacing: 1px;
+    color: var(--text-muted);
+}
+
+.row {
+    display: grid;
+    padding: var(--space-sm);
+    border-bottom: 1px solid var(--border);
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.row:hover {
+    background: rgba(255, 255, 255, 0.03);
+    transform: scale(1.01);
+}
+
+.explore .row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.small .row {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+}
+
+.large .row {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+}
+
+.rankingSection {
+    margin-top: var(--space-3xl);
+}
+
+.stat {
+    text-align: center;
+}
+
+.playoff {
+    background: linear-gradient(90deg,
+            rgba(34, 211, 238, 0.12),
+            transparent);
+}
+
+.relegation {
+    background: linear-gradient(90deg,
+            rgba(248, 113, 113, 0.15),
+            transparent);
+}
+
+.good {
+    color: var(--good);
+    text-shadow: 0 0 6px rgba(74, 222, 128, 0.6);
+}
+
+.bad {
+    color: var(--bad);
+    text-shadow: 0 0 6px rgba(248, 113, 113, 0.5);
+}
+
+/* .top {
+    background: rgba(34,197,94,0.2);
+} */
