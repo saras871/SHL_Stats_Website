@@ -5,6 +5,7 @@ obj/
 # User-specific files
 *.user
 *.suo
+appsettings.Development.json
 
 # NuGet
 *.nuget.*
