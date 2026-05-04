@@ -1,6 +1,6 @@
 # 🏒 SHL Analytics Website
 
-A full-stack hockey analytics project that evaluates SHL players and teams by transforming performance data into ranked insights using SQL-based models
+Beginning of a full-stack hockey analytics project that evaluates SHL players and teams by transforming performance data into ranked insights using SQL-based models
 
 ## 💡 Current features
 
