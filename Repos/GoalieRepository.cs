@@ -101,9 +101,7 @@ SELECT
     ISNULL(RegGAA - PlayoffGAA, 0) AS GaaDiff,
 
     ISNULL(
-        (PlayoffSavePct - RegSavePct) +
-        (RegGAA - PlayoffGAA),
-    0) AS ClutchScore
+        (PlayoffSavePct - RegSavePct) + (RegGAA - PlayoffGAA), 0) AS ClutchScore
 
 FROM GoalieSplit
 
