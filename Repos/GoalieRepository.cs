@@ -20,7 +20,7 @@ public class GoalieRepository
 // Ranked equally based on both SVS% (higher is better) and GAA (lower is better).
 // Combines rankings from SVS% and GAA into a single RankScore
 // Lower RankScore = better overall performance
-// Only includes goalies with at least 10 games played in regular season.
+// Only includes goalies with at least 15 games played in regular season.
         var sql = @"
         WITH RankedGoalies AS (
     SELECT  
@@ -41,7 +41,7 @@ public class GoalieRepository
     JOIN Team t ON t.TeamId = p.TeamId
 
     WHERE gs.Competition = 'Regular'
-    AND gs.GamesPlayed > 10
+    AND gs.GamesPlayed >= 15
 )
 
 SELECT *,
