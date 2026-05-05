@@ -72,10 +72,10 @@ function renderExplore(data) {
             <div>${medal} ${g.name} </div>
             <div>${g.team}</div>
             <div class="stat"> ${g.gamesPlayed}</div>
-            <div class="stat"> ${g.saves}</div>
             <div class="stat ${saveClass}">${g.savePercentage.toFixed(2)}</div>
-            <div class="stat ">${g.goalsAgainst ?? "N/A"}</div>
+            <div class="stat"> ${g.saves}</div>
             <div class="stat ${gaaClass}">${g.goalsAgainstAverage.toFixed(2)}</div>
+            <div class="stat ">${g.goalsAgainst ?? "N/A"}</div>
             <div class="stat">${g.shutouts ?? "N/A"}</div>
         `;
 
@@ -97,9 +97,9 @@ function renderClutch(data) {
         row.innerHTML = `
             <div>${g.name}</div>
             <div>${g.team}</div>
-            <div class="stat">${g.saveDiff.toFixed(3)}</div>
+            <div class="stat">${g.saveDiff.toFixed(2)}</div>
             <div class="stat">${g.gaaDiff.toFixed(2)}</div>
-            <div class="stat ${clutchScoreClass}">${g.clutchScore.toFixed(3)}</div>
+            <div class="stat ${clutchScoreClass}">${g.clutchScore.toFixed(2)}</div>
         `;
 
         table.appendChild(row);
