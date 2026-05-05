@@ -37,10 +37,10 @@ Run the SQL scripts in the following order:
 ## ⚙️ Configuration
 Update your connection string in appsettings.json depending on your SQL Server setup.
 - **Option 1: Windows Authentication (local development)**
-- "ConnectionStrings": {"DefaultConnection": "Server=localhost;Database=shl;Trusted_Connection=True;"
+  - "ConnectionStrings": {"DefaultConnection": "Server=localhost;Database=shl;Trusted_Connection=True;"
 }
 - **Option 2: SQL Server Authentication**
-- "ConnectionStrings": {"DefaultConnection": "Server=localhost;Database=shl;User Id=YOUR_USER;Password=YOUR_PASSWORD;"
+  - "ConnectionStrings": {"DefaultConnection": "Server=localhost;Database=shl;User Id=YOUR_USER;Password=YOUR_PASSWORD;"
 }
 
 ## ▶️ Running the Project
