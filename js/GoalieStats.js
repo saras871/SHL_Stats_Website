@@ -56,6 +56,9 @@ function renderExplore(data) {
         row.className = "row data-row";
 
         if (index < 5) row.classList.add("top");
+        const goalsAgainst = g.goalsAgainst ?? "N/A";
+        const shutouts = g.shutouts ?? "N/A";
+
         // Color coding for stats
         const saveClass = g.savePercentage > 90 ? "good" : "bad";
         const gaaClass = g.goalsAgainstAverage <= 2.5 ? "good" : "bad";
@@ -71,9 +74,9 @@ function renderExplore(data) {
             <div class="stat"> ${g.gamesPlayed}</div>
             <div class="stat"> ${g.saves}</div>
             <div class="stat ${saveClass}">${g.savePercentage.toFixed(2)}</div>
-            <div class="stat">${g.goalsAgainst}</div>
+            <div class="stat ">${g.goalsAgainst ?? "N/A"}</div>
             <div class="stat ${gaaClass}">${g.goalsAgainstAverage.toFixed(2)}</div>
-            <div class="stat">${g.shutouts}</div>
+            <div class="stat">${g.shutouts ?? "N/A"}</div>
         `;
 
         table.appendChild(row);

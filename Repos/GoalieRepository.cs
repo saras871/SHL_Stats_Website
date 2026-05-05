@@ -9,7 +9,7 @@ public class GoalieRepository
     // Get connection string from appsettings.json
     public GoalieRepository(IConfiguration config)
     {
-        _connectionString = config.GetConnectionString("Default");
+        _connectionString = config.GetConnectionString("Default")!;
     }
     // NOTE: Weighted averages are used throughout (stat * games played) to avoid skew from small sample sizes.
     // Explore section Goalie ranking 

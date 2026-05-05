@@ -1,0 +1,5 @@
+USE tempdb;
+GO
+
+CREATE DATABASE shl;
+GO
