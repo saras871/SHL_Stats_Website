@@ -45,11 +45,8 @@ Update your connection string in appsettings.json depending on your SQL Server s
 
 ## ▶️ Running the Project
 1.	Open a terminal in the project root folder
-2.	Start the API:
-    dotnet run
-4.	The API will run on:
-http://localhost:5057
-5.	Open the frontend manually:
+2.	Start the API: dotnet run
+3.	Open the frontend manually:
 html/index.html
 
 
