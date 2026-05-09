@@ -96,5 +96,39 @@ GO
 ALTER TABLE [dbo].[GoalieStats] CHECK CONSTRAINT [FK_GoalieStats_players]
 GO
 
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[PlayerStats](
+	[StatId] [uniqueidentifier] NOT NULL,
+	[Goals] [int] NULL,
+	[Assists] [int] NULL,
+	[Points] [int] NULL,
+	[PenaltyMinutes] [int] NULL,
+	[GamesPlayed] [int] NULL,
+	[Competition] [nvarchar](50) NULL,
+	[Season] [nvarchar](50) NULL,
+	[PlayerId] [uniqueidentifier] NULL,
+	[GameId] [uniqueidentifier] NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[PlayerStats] ADD  CONSTRAINT [PK_PlayerStats] PRIMARY KEY CLUSTERED 
+(
+	[StatId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[PlayerStats] ADD  CONSTRAINT [DEFAULT_PlayerStats_StatId]  DEFAULT (newid()) FOR [StatId]
+GO
+ALTER TABLE [dbo].[PlayerStats]  WITH CHECK ADD  CONSTRAINT [FK_PlayerStats_Games] FOREIGN KEY([GameId])
+REFERENCES [dbo].[Games] ([GameId])
+GO
+ALTER TABLE [dbo].[PlayerStats] CHECK CONSTRAINT [FK_PlayerStats_Games]
+GO
+ALTER TABLE [dbo].[PlayerStats]  WITH CHECK ADD  CONSTRAINT [FK_PlayerStats_players] FOREIGN KEY([PlayerId])
+REFERENCES [dbo].[players] ([PlayerId])
+GO
+ALTER TABLE [dbo].[PlayerStats] CHECK CONSTRAINT [FK_PlayerStats_players]
+GO
 
 

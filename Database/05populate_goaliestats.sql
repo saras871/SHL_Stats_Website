@@ -41,8 +41,8 @@ FROM (
 -- LULEÅ
 ('Joel','Lassinantti','Luleå HF',20,2.61,51,88.96,2,411,'Regular'),
 ('Joel','Lassinantti','Luleå HF',2,6.69,6,76.92,0,20,'Playoff'),
-('Matteus','Ward','Luleå HF',33,2.36,20,89.28,2,633,'Regular'),
-('Matteus','Ward','Luleå HF',14,2.10,232,92.06,1,371,'Playoff'),
+('Matteus','Ward','Luleå HF',33,2.36,76,89.28,2,633,'Regular'),
+('Matteus','Ward','Luleå HF',14,2.10,32,92.06,1,371,'Playoff'),
 ('Isak','Sörqvist','Luleå HF',0,0,0,0,0,0,'Regular'),
 
 -- FRÖLUNDA
@@ -148,3 +148,12 @@ JOIN Players p
             WHEN gs.Season = 'Regular' THEN 'Regular'
             ELSE 'Playoff'
         END );
+
+UPDATE gs
+SET Competition = 'Relegation'
+FROM GoalieStats gs
+JOIN Players p ON gs.PlayerId = p.PlayerId
+JOIN Team t ON p.TeamId = t.TeamId
+WHERE gs.Season = '25/26'
+AND gs.Competition = 'Playoff'
+AND t.Name IN ('HV71', 'Leksands IF');
